@@ -1,7 +1,4 @@
 version: '3'
-# can extends service that you need
-# remember you can use the same service name
-# As backend service is not api service
 services:
 
   api:
@@ -13,3 +10,8 @@ services:
     extends:
       file: docker-compose-database.yml
       service: database
+      
+# have to set it again because it can't see
+volumes: # for storing value on container (can call service in backend part)
+  information-database: # define volume name
+    driver: local # use only current pc

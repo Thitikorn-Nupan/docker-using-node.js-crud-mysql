@@ -1,12 +1,12 @@
 {
-  "name": "building-basic-api-using-node-2",
+  "name": "building-basic-api-using-node-reduce",
   "version": "1.0.0",
   "description": "",
-  "main": "./controller/control.application.js",
+  "main": "controller/control.application.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./controller/control.application.js"
+    "start": "node controller/control.application.js"
   },
   "keywords": [],
   "author": "",

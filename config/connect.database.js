@@ -1,11 +1,13 @@
-import Logging from "../log/logging.js";
 import mysql from "mysql2";
 import {information} from "./details.database.js";
 class ConnectDatabase {
+
     connect = null
+
     constructor() {
         this.#initConnect()
     }
+
     #initConnect () {
         this.connect = mysql.createConnection({
             host : information.host,
@@ -15,6 +17,7 @@ class ConnectDatabase {
             database : information.database
         })
     }
+
 }
 
 /*

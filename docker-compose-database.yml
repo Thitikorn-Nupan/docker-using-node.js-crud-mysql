@@ -3,7 +3,7 @@ services:
   database:
     container_name: mysql # define container name
     restart: always # I ask docker-compose.yml to always restart this container if it fails.
-    image: mysql:latest
+    image: mysql
     environment:
       - MYSQL_DATABASE=${SQLD_DATABASE}
       - MYSQL_ROOT_PASSWORD=${SQLD_ROOT_PASSWORD}
@@ -18,7 +18,5 @@ services:
       - .env
 
 volumes: # for storing value on container (can call service in backend part)
-  # like volumes:
-  #      - information-database:/var/lib/mysql
   information-database: # define volume name
     driver: local # use only current pc

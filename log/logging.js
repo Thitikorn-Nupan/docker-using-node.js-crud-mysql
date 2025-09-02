@@ -1,7 +1,9 @@
 import path from 'path'
 import process from 'process'
 import { createLogger, format, transports } from 'winston'
+
 class Logging {
+
     get log() {
         return createLogger({
             level: 'silly',
@@ -16,5 +18,7 @@ class Logging {
             ]
         }) // createLogger({})
     }
+
 }
+
 export default Logging

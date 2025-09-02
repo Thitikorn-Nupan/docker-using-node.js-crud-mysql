@@ -2,13 +2,15 @@ import {modulesApi} from '../service/modules.api.js'
 import CommandSql from "../service/command.sql.js";
 import ConnectDatabase from "../config/connect.database.js";
 import Logging from "../log/logging.js";
+
 class RouterBooks {
+
     log = null
     routerBooks = null
     connect = null
 
     constructor() {
-        /* set meddler ware*/
+        // set meddler ware
         this.routerBooks = modulesApi.router
         this.routerBooks.use(modulesApi.bodyParser.json())
         this.routerBooks.use(modulesApi.bodyParser.urlencoded({extended:true}))
