@@ -2,13 +2,13 @@
 FROM node:18.14.1
 LABEL authors="ttknp"
 
-# default should set like below
+# create /usr/src/app on container
 WORKDIR /usr/src/app
 
 # copy package.json file to /usr/src/app
 COPY package.json ./
 
-# skip npm init because I did
+# install modules on container
 RUN npm install
 
 # copy all file/folder than put to /usr/src/app
@@ -18,5 +18,5 @@ COPY . .
 EXPOSE 8000
 
 # Now I have to do is to tell Docker what command I want to run when our image is run inside of a container.
-#
+# It follows "scripts": { "test": "echo \"Error: no test specified\" && exit 1", "start": "node controller/control.api.js"  }
 CMD [ "npm", "start" ]

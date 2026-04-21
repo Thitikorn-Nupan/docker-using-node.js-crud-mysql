@@ -1,5 +1,6 @@
 import mysql from "mysql2";
 import {information} from "./details.database.js";
+
 class ConnectDatabase {
 
     connect = null
@@ -20,7 +21,7 @@ class ConnectDatabase {
 
 }
 
-/*
+/**
 new ConnectDatabase().connect.query('select * from romance', function (err, result, fields) {
     // when select table result arg it'll store value of table
     if (!err) {

@@ -1,6 +1,6 @@
 version: '3'
 services:
-
+  # whatever name of service won't work because you extends and change it name for ex, docker-compose up -d --build api
   api:
     extends:
       file: docker-compose-api.yml
@@ -10,7 +10,7 @@ services:
     extends:
       file: docker-compose-database.yml
       service: database
-      
+
 # have to set it again because it can't see
 volumes: # for storing value on container (can call service in backend part)
   information-database: # define volume name
